@@ -15,7 +15,7 @@
         <%= link_to link_to_new, class: 'btn btn-sm border-0 btn-success float-end mb-3' do %>
             <i class="bi bi-plus"></i> Adicionar </a>
         <% end %>
-        <table class="table table-striped" style="width:100%" id="table-usuarios-<%= id %>">
+        <table class="table table-responsive" style="width:100%" id="table-usuarios-<%= id %>">
             <thead>
                 <tr>
                     <th>#</th>
@@ -38,6 +38,7 @@
 <script type="text/javascript">
     var table_usuarios_<%= id %> = $('#table-usuarios-<%= id %>').DataTable({
         stateSave: true,
+        responsive: true,
         order: [
             [0, "desc"]
         ],

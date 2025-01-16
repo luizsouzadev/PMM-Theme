@@ -14,7 +14,7 @@
         <i class="bi bi-plus"></i> Adicionar</a>
     <%% end %>
 <%% end %>
-<table class="table table-striped" style="width:100%" id="table-<%= plural_table_name %>-<%%= id %>">
+<table class="table table-responsive" style="width:100%" id="table-<%= plural_table_name %>-<%%= id %>">
     <thead>
         <tr>
             <th>#</th>
@@ -33,6 +33,7 @@
 <script type="text/javascript">
     var table_<%= plural_table_name %>_<%%= id %> = $('#table-<%= plural_table_name %>-<%%= id %>').DataTable({
         stateSave: true,
+        responsive: true,
         order: [
             [0, "desc"]
         ],

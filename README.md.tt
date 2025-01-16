@@ -56,6 +56,3 @@ rails generate menu Post
 rails generate change_routes Post
 ``` 
 
-## Documentação do template 
-
-* [sigmun-hero](https://github.com/heronildesjr/sigmun-hero/blob/master/dist/docs.html)

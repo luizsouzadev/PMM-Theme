@@ -1,12 +1,11 @@
 <header id="sm-hero-demo__header">
-    <div class="custom-border"></div>
     <!-- Responsive navbar-->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light border-bottom">
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light border-bottom shadow-sm">
         <div class="container-fluid">
             <div>
-                <button class="navbar-toggler d-inline-block" type="button" onclick="sigmun.functions.toggleAside()"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler d-inline-block border-0 px-2 me-3" type="button" onclick="pmmtheme.functions.toggleAside()"><span class="navbar-toggler-icon"></span></button>
                 <a class="navbar-brand" href="<%= admin_root_path %>">
-                    <%= image_tag "main-logo.png", class: "img-fluid", style: 'max-height: 40px;', alt: '' %>
+                  <%= image_tag "logo-pmm.svg", class: "img-fluid", style: 'max-height: 40px;', alt: '' %>
                 </a>
             </div>
             <div class="d-none d-md-flex flex-grow-1 mx-5 justify-content-center">
@@ -51,24 +50,18 @@
 
                         </ul>
                     </nav> %>
-
+ 
                     <!-- componente -->
-                    <div class="ms-2 sm-hero__avatar position-relative">
-
-                        <div class="bg-info rounded-circle overflow-hidden" data-bs-toggle="tooltip" title="Meu Perfil">
-                            <a href="#" role="button" class="d-block" id="dropdownAvatar" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="<%= image_path('admin/avatar.png')%>" alt="avatar">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownAvatar">
-                                <li>
-                                    <%= link_to 'Meu Perfil', edit_admin_usuario_path(current_usuario), class: 'dropdown-item' %>    
-                                </li>
-                                <li>
-                                    <%= link_to "Fazer Logout", destroy_usuario_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
-                                </li>
-                            </ul>
-                        </div>
+                   
+                    <div class="ms-2 sm-hero__avatar position-relative px-2">
+                      <div class="bg-info rounded-circle overflow-hidden" title="Meu Perfil">
+                        <a href="#" role="button" class="d-block" id="dropdownAvatar" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="<%= image_path('admin/avatar.png')%>" alt="avatar">
+                        </a>
+                      </div>
                     </div>
+                    <div>
+                      <%= button_to "Logout", destroy_usuario_session_path, class: "btn border-0 btn-primary float-end px-3 py-2", method: :delete, data: {turbo: false} %>
                 </div>
             </div>
             <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">

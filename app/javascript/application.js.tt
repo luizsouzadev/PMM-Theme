@@ -4,8 +4,9 @@ import "controllers"
 
 import 'select2'
 
-import "sigmun"
-import "custom"
+Turbo.session.drive = false
+
+// import "main"
 
 $(".select2_basico").select2({
     theme: 'bootstrap-5',

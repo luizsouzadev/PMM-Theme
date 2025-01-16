@@ -132,26 +132,26 @@ psql -U postgres
 Para criar um projeto Rails, basta usar o `rails new` comando, assim:
 
 ```
-rails new sigmun -d postgresql
+rails new PMM -d postgresql
 ```
 
 Ou considere usar o template criado para os futuros projetos da PMM: 
 
 
 ```bash 
-rails new sigmun -d postgresql -m https://raw.githubusercontent.com/isaahmdantas/sigmun-rails/main/template.rb
+rails new PMM -d postgresql -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
 ```
 
 ou 
 
 ```bash
-rails new sigmun -d postgresql -m ~/sigmun-rails/template.rb
+rails new PMM -d postgresql -m ~/PMM-Theme/template.rb
 ```
 
 Rodar a aplicação: 
 
 ```bash
-cd ~/sigmun
+cd ~/PMM
 bundle exec bin/setup 
 rails s
 ```

@@ -5,14 +5,14 @@ require "json"
 
 RAILS_REQUIREMENT = "~> 7.0.0".freeze
 
-# Aplicar o template no projeto rails 
+# Aplicar o template no projeto rails
 def apply_template!
     assert_minimum_rails_version
     assert_valid_options
     assert_postgresql
     add_template_repository_to_source_path
 
-    template "Gemfile.tt", force: true 
+    template "Gemfile.tt", force: true
     template "README.md.tt", force: true
 
     template "config/application.yml.tt"
@@ -34,7 +34,7 @@ def apply_template!
     after_bundle do
       append_to_file ".gitignore", <<~IGNORE
         config/application.yml
-        
+
         /vendor/bundle/
         /public/assets
         /public/uploads
@@ -43,7 +43,7 @@ def apply_template!
         /node_modules
 
         .ruby-version
-        .node-version 
+        .node-version
         .ruby-gemset
 
         # OS generated files #
@@ -65,10 +65,7 @@ def apply_template!
       insert_into_file "config/importmap.rb", after: 'pin_all_from "app/javascript/controllers", under: "controllers"' do
         <<-RUBY.strip_heredoc
           \n
-          # Scripts relacionados ao projeto
-          pin 'sigmun', to: 'sigmun.js', preload: true
           pin "select2", to: "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
-          pin 'custom', to: 'custom.js'
         RUBY
       end
 
@@ -97,7 +94,7 @@ def assert_minimum_rails_version
     requirement = Gem::Requirement.new(RAILS_REQUIREMENT)
     rails_version = Gem::Version.new(Rails::VERSION::STRING)
     return if requirement.satisfied_by?(rails_version)
-  
+
     prompt = "Este template requer o rails -v #{RAILS_REQUIREMENT}. "\
         "Você está usando rails -v #{rails_version}. Continuar de qualquer maneira ?"
     exit 1 if no?(prompt)
@@ -133,15 +130,15 @@ end
 def add_template_repository_to_source_path
     if __FILE__ =~ %r{\Ahttps?://}
       require "tmpdir"
-      source_paths.unshift(tempdir = Dir.mktmpdir("sigmun-rails-"))
+      source_paths.unshift(tempdir = Dir.mktmpdir("PMM-Theme-"))
       at_exit { FileUtils.remove_entry(tempdir) }
       git clone: [
         "--quiet",
-        "https://isaahmdantas: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@github.com/isaahmdantas/sigmun-rails.git",
+        "https://github.com/luizsouzadev/PMM-Theme.git",
         tempdir
       ].map(&:shellescape).join(" ")
-  
-      if (branch = __FILE__[%r{sigmun-rails/(.+)/template.rb}, 1])
+
+      if (branch = __FILE__[%r{PMM-Theme/(.+)/template.rb}, 1])
         Dir.chdir(tempdir) { git checkout: branch }
       end
     else

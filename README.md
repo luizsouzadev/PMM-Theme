@@ -38,13 +38,13 @@ Este template atualmente funciona com:
 Para gerar uma aplicação Rails usando este template, passe a opção `-m` para `rails new`, assim: 
 
 ```bash 
-rails new sigmun -d postgresql -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
+rails new PMM -d postgresql -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
 ```
 
 ou 
 
 ```bash
-rails new sigmun -d postgresql -m ~/PMM-Theme/template.rb
+rails new PMM -d postgresql -m ~/PMM-Theme/template.rb
 ```
 
 

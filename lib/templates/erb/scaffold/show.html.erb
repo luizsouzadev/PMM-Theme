@@ -28,7 +28,7 @@
           <%% end %>
         </div>
         <div class="card-footer d-flex justify-content-end">
-          <%%= link_to <%= "admin_#{plural_table_name}" %>_path, :class=> "d-inline-block btn btn-secondary me-2" do  %>
+          <%%= link_to <%= "admin_#{plural_table_name}" %>_path, :class=> "d-inline-block btn btn-dark me-2" do  %>
             <i class="bi bi-arrow-left"></i> <%%= t("helpers.links.back") %>
           <%% end %>
           <%%= render 'show_actions' , <%= singular_table_name %>: @<%= singular_table_name %> %>
