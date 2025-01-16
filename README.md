@@ -1,7 +1,7 @@
-# isaahmdantas/sigmun-rails
+# Luizsouzadev/PMM-Theme
 ## Descrição
 
-Template para criar os futuros projetos da Prefeitura Municipal de Mossoró utilizando o framework Ruby on Rails e o template html [sigmun-hero](https://github.com/heronildesjr/sigmun-hero) que foi desenvolvido para o sistema de gestão de municípios SIGMun.
+Template para criar os futuros projetos da Prefeitura Municipal de Mossoró utilizando o framework Ruby on Rails e o template html [PMM-Theme] que foi desenvolvido para o sistema de gestão de municípios.
 
 ## Requisitos 
 
@@ -13,13 +13,10 @@ Este template atualmente funciona com:
 * Node 16 ou superior 
 * Yarn 1.x 
 
-Se precisar de ajuda para configurar um ambiente de desenvolvimento Ruby on Rails, confira meu [Guia de Instalação](https://github.com/isaahmdantas/sigmun-rails/blob/main/INSTALAR_RAILS.md)
-
-
 
 ## Instalação  
 
-*Caso prefira rodar localmente é preciso realizar o clone do repositório para um diretório da sua preferência (git clone git@github.com:isaahmdantas/sigmun-rails.git).* 
+*Caso prefira rodar localmente é preciso realizar o clone do repositório para um diretório da sua preferência (git clone git@github.com:luizsouzadev/PMM-Theme.git).* 
 
 *Opcional.*
 
@@ -27,13 +24,13 @@ Se precisar de ajuda para configurar um ambiente de desenvolvimento Ruby on Rail
 
 ```
     -d postgresql 
-    -m https://raw.githubusercontent.com/isaahmdantas/sigmun-rails/main/template.rb
+    -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
 ```
 
-ou
+
 
 ```
-    -d postgresql -m ~/sigmun-rails/template.rb
+    -d postgresql -m ~/PMM-Theme/template.rb
 ```
 
 ## Utilização
@@ -41,13 +38,13 @@ ou
 Para gerar uma aplicação Rails usando este template, passe a opção `-m` para `rails new`, assim: 
 
 ```bash 
-rails new sigmun -d postgresql -m https://raw.githubusercontent.com/isaahmdantas/sigmun-rails/main/template.rb
+rails new sigmun -d postgresql -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
 ```
 
 ou 
 
 ```bash
-rails new sigmun -d postgresql -m ~/sigmun-rails/template.rb
+rails new sigmun -d postgresql -m ~/PMM-Theme/template.rb
 ```
 
 
@@ -58,12 +55,12 @@ O único banco de dados suportado por este template é o `postgresql`.
 Se você instalou este template como padrão (usando `~/.railsrc` conforme descrito acima), tudo o que você precisa fazer é executar:
 
 ```bash
-rails new sigmun
+rails new PMM
 ```
 
 Concluir a configuração do template: 
 ```bash
-cd ~/sigmun
+cd ~/PMM
 bundle exec bin/setup 
 ```
 
@@ -104,7 +101,7 @@ rails generate change_routes Post
 
 O template executará as seguintes etapas:
 
-1. Gera os arquivos e diretórios da aplicação com base nos estilos e componentes do [sigmun-hero](https://github.com/heronildesjr/sigmun-hero)
+1. Gera os arquivos e diretórios da aplicação com base nos estilos e componentes do PMM-Theme
 2. Gera toda configuração padrão dos projetos Rails
 3. Gerador para criar as classes Datatable dos Models 
 4. Gerador para criar os arquivos de localização dos Models
@@ -150,4 +147,4 @@ O template executará as seguintes etapas:
 
 ## Créditos 
 
-* Este projeto foi desenvolvido com base no template do [mattbrictson/rails-template](https://github.com/mattbrictson/rails-template). Agradeço aos criadores do template por fornecerem uma estrutura sólida e inspiração para este template.
+* Este projeto foi desenvolvido com base no template do [isaahmdantas/sigmun-rails](https://github.com/isaahmdantas/sigmun-rails). Agradeço aos criadores do template por fornecerem uma estrutura sólida e inspiração para este template.
