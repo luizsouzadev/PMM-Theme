@@ -41,13 +41,6 @@ Para gerar uma aplicação Rails usando este template, passe a opção `-m` para
 rails new PMM -d postgresql -m https://raw.githubusercontent.com/luizsouzadev/PMM-Theme/main/template.rb
 ```
 
-ou 
-
-```bash
-rails new PMM -d postgresql -m ~/PMM-Theme/template.rb
-```
-
-
 *Lembre-se que as opções devem vir após o nome do aplicativo.* 
 O único banco de dados suportado por este template é o `postgresql`.
 
